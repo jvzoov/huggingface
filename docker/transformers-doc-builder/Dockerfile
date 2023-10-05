@@ -1,4 +1,6 @@
-FROM python:3.8
+# https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel-22-12.html#rel-22-12
+FROM nvcr.io/nvidia/pytorch:22.12-py3
+
 LABEL maintainer="Hugging Face"
 
 RUN apt update
