@@ -1,5 +1,5 @@
 # https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel-22-12.html#rel-22-12
-FROM nvcr.io/nvidia/pytorch:22.12-py3
+FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04
 
 LABEL maintainer="Hugging Face"
 
