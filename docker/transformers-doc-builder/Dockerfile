@@ -4,6 +4,10 @@ FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04
 LABEL maintainer="Hugging Face"
 
 RUN apt update
+RUN apt install -y git libsndfile1-dev tesseract-ocr espeak-ng python3 python3-pip ffmpeg git-lfs
+RUN git lfs install
+RUN python3 -m pip install --no-cache-dir --upgrade pip
+
 RUN git clone https://github.com/huggingface/transformers
 
 RUN python3 -m pip install --no-cache-dir --upgrade pip && python3 -m pip install --no-cache-dir git+https://github.com/huggingface/doc-builder ./transformers[dev]
